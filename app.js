@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
-
+console.log("hi")
 app.use("/uploads", (_, res, next) => {
   res.set("Cross-Origin-Resource-Policy", "cross-origin");
   next();
