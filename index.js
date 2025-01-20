@@ -4,6 +4,7 @@ const dotenv =require('dotenv');
 const app=require('./app');
 dotenv.config();
 mongoose
+
     .connect(process.env.MONGODB_URL)
     .then(() => {
         console.log('DB connection successful');

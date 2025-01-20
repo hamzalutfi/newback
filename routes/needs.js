@@ -3,6 +3,11 @@ const router = express.Router();
 const needController = require("../controller/needController");
 const { upload } = require("../middle/uploadFiles");
 const bearer = require("../middle/middle");
+const app = express();
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to HopeMaker API!");
+});
+
 
 router.get("/cases", needController.getAllCases);
 router.get("/donor", bearer, needController.getDonorCases);
