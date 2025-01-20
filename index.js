@@ -15,3 +15,7 @@ mongoose
     app.listen(process.env.PORT, () => {
         console.log('Server is running on port 3000');
     })
+    app.get("/", (req, res) => {
+        res.status(200).send("Welcome to the HopeMaker API!");
+      });
+      
